@@ -7,7 +7,7 @@ public class Software extends Product {
     private String os;
 
     public Software(){
-        super();
+        //super();
     }
 
 

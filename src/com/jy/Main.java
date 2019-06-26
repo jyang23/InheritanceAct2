@@ -10,7 +10,7 @@ public class Main {
         String code = in.nextLine();
 
         Product p = new Product();
-        System.out.println(p.toString());
+        //System.out.println(p.toString());
 
 
         Book b = new Book();
@@ -19,43 +19,44 @@ public class Main {
         b.setPrice(60.57);
         b.setDescription("Sample Book");
         b.setPages(20);
-        System.out.println(b.toString());
+        b.setQuantity(10);
+        System.out.println(b);
 
-        Book c = new Book();
-        c.setCode(code);
-        c.setAuthor("Goodbye");
-        c.setPrice(60.57);
-        c.setDescription("Another Sample Book");
-        c.setPages(20);
-        System.out.println(b.toString());
+//        Book c = new Book();
+//        c.setCode(code);
+//        c.setAuthor("Goodbye");
+//        c.setPrice(60.57);
+//        c.setDescription("Another Sample Book");
+//        c.setPages(20);
+//        //System.out.println(b.toString());
+//
+//        Book d = new Book();
+//        d.setCode(code);
+//        d.setAuthor("Hello");
+//        d.setPrice(60.57);
+//        d.setDescription("Sample Book");
+//        d.setPages(20);
+//        //System.out.println(d.toString());
 
-        Book d = new Book();
-        d.setCode(code);
-        d.setAuthor("Hello");
-        d.setPrice(60.57);
-        d.setDescription("Sample Book");
-        d.setPages(20);
-        System.out.println(d.toString());
 
-
-        if(b.equals(c))
-        {
-            System.out.println("books b and c are the same");
-        }
-        else
-        {
-            System.out.println("books b and c are not the same");
-
-        }
-
-        if(b.equals(d))
-        {
-            System.out.println("books b and d are the same");
-        }
-        else
-        {
-            System.out.println("books b and d are not the same");
-        }
+//        if(b.equals(c))
+//        {
+//            System.out.println("books b and c are the same");
+//        }
+//        else
+//        {
+//            System.out.println("books b and c are not the same");
+//
+//        }
+//
+//        if(b.equals(d))
+//        {
+//            System.out.println("books b and d are the same");
+//        }
+//        else
+//        {
+//            System.out.println("books b and d are not the same");
+//        }
 
 
         System.out.println("Next Book Code: ");
@@ -68,7 +69,7 @@ public class Main {
         s.setDescription("Mac for beginners");
         s.setPlatform("Mac");
         s.setProgrammer("java");
-        System.out.println(s.toString());
+        //System.out.println(s.toString());
 
     }
 }

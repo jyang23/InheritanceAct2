@@ -4,9 +4,11 @@ public class Book extends Product {
 
     private String author;
     private int pages;
+    private double price;
+    private int quantity;
 
     public Book(){
-        super();
+        //super();
     }
 
     public String getAuthor() {
@@ -36,5 +38,31 @@ public class Book extends Product {
             {
             return false;
         }
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public double total()
+    {
+        double total;
+        total = getQuantity()*getPrice();
+        return total;
+    }
+
+    @Override
+    public String toString() {
+        return  "Book Title:             " + getDescription() + "\n"+
+                "Code:                   " + getCode() + "\n"+
+                "Author:                 " + author + "\n"+
+                "Pages:                  " + pages + "\n"+
+                "Price:                  " + getPrice() + "\n"+
+                "Quantity:               " + quantity + "\n"+
+                "Total Price:            " + total() + "\n";
     }
 }

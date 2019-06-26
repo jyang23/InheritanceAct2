@@ -8,6 +8,7 @@ public class Product{
     private String code;
     private String description;
     private double price;
+    private int quantity;
 
     protected static int count = 0; // a protected static variable
 
@@ -15,16 +16,18 @@ public class Product{
         code = "";
         description = "";
         price = 0;
-        System.out.println("A Product");
+        quantity = 0;
+        //System.out.println("A Product");
     }
 
     // Get and set accessors for the code, description, and price instance variables
 
     @Override
     public String toString() {
-        return "Code:                " + code + "\n" +
+        return  "Code:               " + code + "\n" +
                 "Description:        " + description + "\n" +
-                "Price:              " + this.getFormattedPrice(price) + "\n";
+                "Price:              " + this.getFormattedPrice(price) + "\n"+
+                "Quantity:           " + quantity + "\n";
     }
 
     public boolean equals() {
@@ -33,7 +36,7 @@ public class Product{
     }
 
     private String getFormattedPrice(double price) {
-        // Use the NumberFormat class to format the price to 2 decimal places
+        // Use the NumberFormat class to form  at the price to 2 decimal places
         NumberFormat number = NumberFormat.getInstance();
         number.setMaximumFractionDigits(2);
         number.setMinimumFractionDigits(2);
@@ -69,4 +72,5 @@ public class Product{
     public void setPrice(double price) {
         this.price = price;
     }
+
 }
