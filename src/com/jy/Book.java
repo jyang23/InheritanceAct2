@@ -6,6 +6,7 @@ public class Book extends Product {
     private int pages;
     private double price;
     private int quantity;
+    private boolean inStock;
 
     public Book(){
         //super();
@@ -48,11 +49,28 @@ public class Book extends Product {
         this.quantity = quantity;
     }
 
+
     public double total()
     {
         double total;
-        total = getQuantity()*getPrice();
-        return total;
+        if (isInStock() == true)
+        {
+            total = getQuantity() * getPrice();
+            return total;
+        }
+        else
+        {
+            total = 0;
+            return total;
+        }
+    }
+
+    public boolean isInStock() {
+        return inStock;
+    }
+
+    public void setInStock(boolean inStock) {
+        this.inStock = inStock;
     }
 
     @Override
@@ -62,6 +80,7 @@ public class Book extends Product {
                 "Author:                 " + author + "\n"+
                 "Pages:                  " + pages + "\n"+
                 "Price:                  " + getPrice() + "\n"+
+                "Stock:                  " + isInStock() + "\n"+
                 "Quantity:               " + quantity + "\n"+
                 "Total Price:            " + total() + "\n";
     }

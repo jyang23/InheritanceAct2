@@ -20,6 +20,7 @@ public class Main {
         b.setDescription("Sample Book");
         b.setPages(20);
         b.setQuantity(10);
+        b.setInStock(false);
         System.out.println(b);
 
 //        Book c = new Book();
